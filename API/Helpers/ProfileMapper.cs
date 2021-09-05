@@ -1,0 +1,17 @@
+using API.Dtos;
+using AutoMapper;
+using Core.Entities;
+
+namespace API.Helpers
+{
+  public class ProfileMapper : Profile
+  {
+    public ProfileMapper()
+    {
+      CreateMap<Product, ProductDto>()
+      .ForMember(d => d.ProductBrand, o => o.MapFrom(s => s.ProductBrand.Name))
+      .ForMember(d => d.ProductType, o => o.MapFrom(s => s.ProductType.Name))
+      .ForMember(d => d.ImageUrl, o => o.MapFrom<ProductUrlResolver>());
+    }
+  }
+}
