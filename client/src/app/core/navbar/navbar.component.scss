@@ -1,0 +1,56 @@
+@import '../../../variables.scss';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: $white;
+  a {
+    text-decoration: none;
+  }
+
+  #{&}__brand {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+
+    &__text {
+      color: $primary;
+      font-weight: bold;
+      font-size: 24px;
+      margin-left: 5px;
+    }
+  }
+
+  #{&}__nav {
+    display: flex;
+    &__item {
+      margin: 5px;
+      display: block;
+      padding: 3px;
+      color: $black;
+    }
+  }
+
+  #{&}__buttons {
+    display: flex;
+    margin-right: 10px;
+
+    &__button {
+      padding: 5px;
+      display: block;
+      background-color: $primary;
+      margin: 0 5px 0 5px;
+      color: $white;
+      transition: background 300ms ease-in-out;
+      &:hover {
+        background-color: $primary-light;
+      }
+    }
+  }
+}

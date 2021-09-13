@@ -1,0 +1,32 @@
+@import '../../variables.scss';
+
+.shop {
+  margin-top: 60px;
+  display: flex;
+  height: 100%;
+
+  #{&}__filters {
+    width: 20%;
+    padding: 5px;
+
+    &__filter {
+      background-color: $primary;
+      color: $white;
+      padding: 5px;
+      margin: 5px;
+      &__header {
+        border-bottom: 1px solid $gray;
+      }
+
+      &__body {
+        margin-top: 5px;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  #{&}__content {
+    width: 80%;
+    padding: 5px;
+  }
+}
